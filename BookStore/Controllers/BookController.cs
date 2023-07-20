@@ -111,8 +111,8 @@ namespace BookStore.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.CategoryID = new SelectList(db.Categories, "CategoryID", "CategoryName");
-            ViewBag.AuthorID = new SelectList(db.Authors, "AuthorID", "AuthorName");
+            ViewBag.CategoryID = new SelectList(db.Categories, "CategoryID", "CategoryName", book.CategoryID);
+            ViewBag.AuthorID = new SelectList(db.Authors, "AuthorID", "AuthorName", book.AuthorID);
             return View(book);
         }
 
@@ -127,13 +127,13 @@ namespace BookStore.Controllers
                     if (Images != null)
                     {
                         string _FileName = Path.GetFileName(Images.FileName);
-                        string _path = Path.Combine(Server.MapPath("~/bookimages"), _FileName);
+                        string _path = Path.Combine(Server.MapPath("~/Images/bookimages"), _FileName);
                         Images.SaveAs(_path);
                         book.Images = _FileName;
                         // get Path of old image for deleting it
-                        _path = Path.Combine(Server.MapPath("~/bookimages"), form["oldimage"]);
-                        if (System.IO.File.Exists(_path))
-                            System.IO.File.Delete(_path);
+                        //_path = Path.Combine(Server.MapPath("~/Images/bookimages"), form["oldimage"]);
+                        //if (System.IO.File.Exists(_path))
+                        //    System.IO.File.Delete(_path);
 
                     }
                     else

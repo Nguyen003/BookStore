@@ -55,7 +55,7 @@
             @Html.LabelFor(model => model.Images, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.TextBoxFor(model => model.Images, null, new { type = "file", @class = "form-control" })
-                <img src="~//Images/bookimages/@Model.Images" />
+                <img src="~/Images/bookimages/@Model.Images" />
                 @Html.Hidden("oldimage", @Model.Images)
                 @Html.ValidationMessageFor(model => model.Images, "", new { @class = "text-danger" })
             </div>

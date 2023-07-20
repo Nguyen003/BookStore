@@ -217,6 +217,11 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\bookimages\2005_2.0.jpg" />
+    <Content Include="Images\bookimages\tinbase.png" />
+    <Content Include="Images\bookimages\tinhocquanly1.png" />
+    <Content Include="Images\bookimages\tinvanphong.jpg" />
+    <Content Include="Images\bookimages\web_quyen2.jpg" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -277,7 +282,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Images\bookimages\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />
